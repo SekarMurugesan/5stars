@@ -1,21 +1,30 @@
+/* 5star rating*/
 .container {
-  position:absolute;
-    top:50%;
-    left:50%;
+  display: flex;
+  justify-content: center;  
   max-width: 400px;
   height: 200px;
-  transform: translate(-50%,-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(230, 226, 226);
 }
-
 .head {font-size: 10px;
- text-align: center;
- 
+  text-align: center;
+  margin-top: 25px; 
 }
 .number {font-size: 20px;letter-spacing: 12px;text-align: center;margin-left: 10px;}
-
 .emptyicon {
   border-image: 2px solid yellow}
+
+/*keyboard*/ 
+.keyboard {
+  display: flex;
+  justify-content: center;  
+  max-width: 400px;
+  height: 320px;
+  border: 1px solid rgb(163, 157, 157);
+  margin: auto;
+} 
+
+/*keyboard*/
+.keyboard button {border-radius: 70px; width: 80px;height: 70px;margin: 2px;
+ font-size: 12px;}
+ .visibility-hidden {visibility: hidden;}
