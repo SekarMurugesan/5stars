@@ -23,8 +23,22 @@
   border: 1px solid rgb(163, 157, 157);
   margin: auto;
 } 
-
-/*keyboard*/
 .keyboard button {border-radius: 70px; width: 80px;height: 70px;margin: 2px;
  font-size: 12px;}
  .visibility-hidden {visibility: hidden;}
+
+ /*paper game*/
+ .heading {font-size: larger;font-weight: bolder;text-align: center;}
+ .papergame {
+  display: flex;
+  justify-content: center;  
+  max-width: 400px;
+  height: 60px;
+  margin: auto;
+ }
+ .papergame button {width: 100px;height: 50px;margin: 5px}
+ .papergame button:hover {background-color: rgb(14, 230, 89) ;}
+ .active {z-index: 2;}
+ .result {white-space: pre;text-align: center; height: 150px;}
+.userwin {color: blue; font-size: larger; font-weight: bolder;}
+.computerwin {color: rgb(255, 0, 140); font-size: larger; font-weight: bolder;}

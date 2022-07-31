@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import { Rating } from 'react-simple-star-rating'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
+import { button } from 'react-bootstrap';
 
 
 
@@ -199,7 +200,39 @@ function App() {
                                    text.value=text.value.replace(/.$/,"9")} 
                                   else {text=document.getElementById("myText")
                                          text.value=text.value+""}
-                                      }                 
+                                      }  
+                                      
+          //paper game
+          const [user, setUser] = useState("")
+          const [computer, setComputer] = useState("") 
+          const [active, setactive] = useState('')
+          const [usercount, setusercount] = useState(0)
+          const [computercount, setcomputercount] = useState(0)
+          const [win, setwin] = useState("")
+          
+          const userChoice=(callback)=>{
+            let x=Math.floor(Math.random()*3)+1
+            if(x===1){setactive(1);setComputer('Rock')}
+            else if(x===2){setactive(2);setComputer('Paper')}
+            else {(setactive(3));setComputer('Scissors')};
+            callback()}
+
+          const computerChoice=()=>{                      
+            if(user=='Rock' && computer=='Paper'){setusercount(usercount+1);setwin("user wins!")}
+            else if(user=='Rock' && computer=='Scissors'){setusercount(usercount+1);setwin("user wins!")}
+            else if(user=='Paper' && computer=='Scissors'){setusercount(usercount+1);setwin("user wins!")}
+            else if(user=='Paper' && computer=='Rock'){setcomputercount(computercount+1);setwin("computer wins!")}
+            else if(user=='Scissors' && computer=='Rock'){setcomputercount(computercount+1);setwin("computer wins!")}
+            else if(user=='Scissors' && computer=='Paper'){setcomputercount(computercount+1);setwin("computer wins!")}             
+            }
+
+       
+         
+        
+        
+        
+         
+                                   
 
   return (
     <>
@@ -229,10 +262,21 @@ function App() {
      <button onClick={Myfuncnine}><div>9</div>vxyz<div></div></button>
      </div>
      </div>
+     <hr/>
 
-
-
-
+     {/*paper game*/}
+     <div className='heading'>Rock Paper Scissors game</div><br/>
+     <div className="papergame">
+     <button className={active===1?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(1);userChoice(computerChoice)}} value="Rock">Rock</button>
+     <button className={active===2?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(2);userChoice(computerChoice)}} value="Paper">Paper</button>
+     <button className={active===3?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(3);userChoice(computerChoice)}} value="Scissors">Scissors</button>
+     </div>
+     <div className='result'>
+     <div>User's Choice:<b>{user}</b></div>
+     <div>Computer's Choice:<b>{computer}</b></div>
+     <div><span className='userwin'>User win:</span><b>{usercount}</b>     <span className='computerwin'>Computer win:</span><b>{computercount}</b></div>
+     </div>
+     <hr/>
     </>
        
   );
