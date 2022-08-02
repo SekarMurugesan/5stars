@@ -51,7 +51,7 @@ function App() {
       const Myfunctwo =()=>{
         countertwo++ 
       const twocounter=setInterval(()=>{ b+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-        if(b>800){b=0;countertwo=0;clearInterval(twocounter)}})
+        if(b>900){b=0;countertwo=0;clearInterval(twocounter)}})
         
       if(countertwo===1){text=document.getElementById("myText")
        text.value=text.value+"2"}
@@ -70,7 +70,7 @@ function App() {
      const Myfuncthree =()=>{
             counterthree++
             const threecounter=setInterval(()=>{ c+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-              if(c>800){c=0;counterthree=0;clearInterval(threecounter)}})
+              if(c>900){c=0;counterthree=0;clearInterval(threecounter)}})
           if(counterthree===1){text=document.getElementById("myText")
            text.value=text.value+"3"}
           else if(counterthree===2){text=document.getElementById("myText")
@@ -88,7 +88,7 @@ function App() {
       const Myfuncfour =()=>{
                 counterfour++
                 const fourcounter=setInterval(()=>{ d+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-                  if(d>800){d=0;counterfour=0;clearInterval(fourcounter)}}) 
+                  if(d>900){d=0;counterfour=0;clearInterval(fourcounter)}}) 
               if(counterfour===1){text=document.getElementById("myText")
                text.value=text.value+"4"}
               else if(counterfour===2){text=document.getElementById("myText")
@@ -108,7 +108,7 @@ function App() {
        const Myfuncfive =()=>{
                     counterfive++
                     const fivecounter=setInterval(()=>{ e+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-                      if(e>800){e=0;counterfive=0;clearInterval(fivecounter)}}) 
+                      if(e>900){e=0;counterfive=0;clearInterval(fivecounter)}}) 
                   if(counterfive===1){text=document.getElementById("myText")
                    text.value=text.value+"5"}
                   else if(counterfive===2){text=document.getElementById("myText")
@@ -127,7 +127,7 @@ function App() {
             const Myfuncsix =()=>{
                         countersix++
                         const sixcounter=setInterval(()=>{ f+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-                          if(f>800){f=0;countersix=0;clearInterval(sixcounter)}}) 
+                          if(f>900){f=0;countersix=0;clearInterval(sixcounter)}}) 
                       if(countersix===1){text=document.getElementById("myText")
                        text.value=text.value+"6"}
                       else if(countersix===2){text=document.getElementById("myText")
@@ -146,7 +146,7 @@ function App() {
               const Myfuncseven =()=>{
                             counterseven++
                             const sevencounter=setInterval(()=>{ g+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-                              if(g>800){g=0;counterfour=0;clearInterval(sevencounter)}}) 
+                              if(g>900){g=0;counterfour=0;clearInterval(sevencounter)}}) 
                           if(counterseven===1){text=document.getElementById("myText")
                            text.value=text.value+"7"}
                           else if(counterseven===2){text=document.getElementById("myText")
@@ -166,7 +166,7 @@ function App() {
                   const Myfunceight =()=>{
                                 countereight++
                                 const eightcounter=setInterval(()=>{ h+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-                                  if(h>800){h=0;countereight=0;clearInterval(eightcounter)}}) 
+                                  if(h>900){h=0;countereight=0;clearInterval(eightcounter)}}) 
                               if(countereight===1){text=document.getElementById("myText")
                                text.value=text.value+"8"}
                               else if(countereight===2){text=document.getElementById("myText")
@@ -185,7 +185,7 @@ function App() {
                       const Myfuncnine =()=>{
                                     counternine++
                                     const ninecounter=setInterval(()=>{ i+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
-                                      if(i>800){i=0;counternine=0;clearInterval(ninecounter)}}) 
+                                      if(i>900){i=0;counternine=0;clearInterval(ninecounter)}}) 
                                   if(counternine===1){text=document.getElementById("myText")
                                    text.value=text.value+"9"}
                                   else if(counternine===2){text=document.getElementById("myText")
