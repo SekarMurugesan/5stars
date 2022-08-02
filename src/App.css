@@ -39,6 +39,6 @@
  .papergame button {width: 100px;height: 50px;margin: 5px}
  .papergame button:hover {background-color: rgb(14, 230, 89) ;}
  .active {z-index: 2;}
- .result {white-space: pre;text-align: center; height: 150px;}
+ .result {white-space: pre;text-align: center; height: 120px;}
 .userwin {color: blue; font-size: larger; font-weight: bolder;}
 .computerwin {color: rgb(255, 0, 140); font-size: larger; font-weight: bolder;}

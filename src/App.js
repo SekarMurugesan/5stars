@@ -1,8 +1,8 @@
-import React, { useState} from 'react'
+import React, { useState,useEffect} from 'react'
 import { Rating } from 'react-simple-star-rating'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
-import { button } from 'react-bootstrap';
+
 
 
 
@@ -24,21 +24,22 @@ function App() {
     let counterseven=0
     let countereight=0
     let counternine=0
-
-
-
-
-
-
     
+    let b=0
+    let c=0
+    let d=0
+    let e=0
+    let f=0
+    let g=0
+    let h=0
+    let i=0
+   
+   
 
     
       const Myfuncone=()=>{
        text=document.getElementById("myText")
-       text.value=text.value+"1"
-      
-
-      
+       text.value=text.value+"1"     
          }
 
        /* const Timer = () => {
@@ -46,11 +47,12 @@ function App() {
             Myfunctwo();
           }, 1);
         }*/
-        
+      
       const Myfunctwo =()=>{
         countertwo++ 
-      const twocounter=setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-        if(d>998){countertwo=0;clearInterval(twocounter)}})
+      const twocounter=setInterval(()=>{ b+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+        if(b>800){b=0;countertwo=0;clearInterval(twocounter)}})
+        
       if(countertwo===1){text=document.getElementById("myText")
        text.value=text.value+"2"}
       else if(countertwo===2){text=document.getElementById("myText")
@@ -63,13 +65,12 @@ function App() {
       countertwo=1;
        text.value=text.value.replace(/.$/,"2")} 
       else {text=document.getElementById("myText")
-             text.value=text.value+""}
-           
+             text.value=text.value+""}          
           }
      const Myfuncthree =()=>{
             counterthree++
-          const threecounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-              if(d>998){counterthree=0;clearInterval(threecounter)}})
+            const threecounter=setInterval(()=>{ c+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+              if(c>800){c=0;counterthree=0;clearInterval(threecounter)}})
           if(counterthree===1){text=document.getElementById("myText")
            text.value=text.value+"3"}
           else if(counterthree===2){text=document.getElementById("myText")
@@ -86,8 +87,8 @@ function App() {
               }     
       const Myfuncfour =()=>{
                 counterfour++
-              const fourcounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-                  if(d>998){counterfour=0;clearInterval(fourcounter)}})
+                const fourcounter=setInterval(()=>{ d+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+                  if(d>800){d=0;counterfour=0;clearInterval(fourcounter)}}) 
               if(counterfour===1){text=document.getElementById("myText")
                text.value=text.value+"4"}
               else if(counterfour===2){text=document.getElementById("myText")
@@ -106,8 +107,8 @@ function App() {
 
        const Myfuncfive =()=>{
                     counterfive++
-                  const fivecounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-                      if(d>998){counterfive=0;clearInterval(fivecounter)}})
+                    const fivecounter=setInterval(()=>{ e+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+                      if(e>800){e=0;counterfive=0;clearInterval(fivecounter)}}) 
                   if(counterfive===1){text=document.getElementById("myText")
                    text.value=text.value+"5"}
                   else if(counterfive===2){text=document.getElementById("myText")
@@ -125,8 +126,8 @@ function App() {
                       
             const Myfuncsix =()=>{
                         countersix++
-                      const sixcounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-                          if(d>998){countersix=0;clearInterval(sixcounter)}})
+                        const sixcounter=setInterval(()=>{ f+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+                          if(f>800){f=0;countersix=0;clearInterval(sixcounter)}}) 
                       if(countersix===1){text=document.getElementById("myText")
                        text.value=text.value+"6"}
                       else if(countersix===2){text=document.getElementById("myText")
@@ -144,8 +145,8 @@ function App() {
 
               const Myfuncseven =()=>{
                             counterseven++
-                          const sevencounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-                              if(d>998){counterseven=0;clearInterval(sevencounter)}})
+                            const sevencounter=setInterval(()=>{ g+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+                              if(g>800){g=0;counterfour=0;clearInterval(sevencounter)}}) 
                           if(counterseven===1){text=document.getElementById("myText")
                            text.value=text.value+"7"}
                           else if(counterseven===2){text=document.getElementById("myText")
@@ -164,8 +165,8 @@ function App() {
                               
                   const Myfunceight =()=>{
                                 countereight++
-                              const eightcounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-                                  if(d>998){countereight=0;clearInterval(eightcounter)}})
+                                const eightcounter=setInterval(()=>{ h+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+                                  if(h>800){h=0;countereight=0;clearInterval(eightcounter)}}) 
                               if(countereight===1){text=document.getElementById("myText")
                                text.value=text.value+"8"}
                               else if(countereight===2){text=document.getElementById("myText")
@@ -183,8 +184,8 @@ function App() {
                                   
                       const Myfuncnine =()=>{
                                     counternine++
-                                  const ninecounter=  setInterval(()=>{var d = new Date().getMilliseconds().toLocaleString();
-                                      if(d>998){counternine=0;clearInterval(ninecounter)}})
+                                    const ninecounter=setInterval(()=>{ i+= (new Date().getMilliseconds().toLocaleString())-((new Date().getMilliseconds().toLocaleString())-1);
+                                      if(i>800){i=0;counternine=0;clearInterval(ninecounter)}}) 
                                   if(counternine===1){text=document.getElementById("myText")
                                    text.value=text.value+"9"}
                                   else if(counternine===2){text=document.getElementById("myText")
@@ -206,26 +207,30 @@ function App() {
           const [user, setUser] = useState("")
           const [computer, setComputer] = useState("") 
           const [active, setactive] = useState('')
-          const [usercount, setusercount] = useState(0)
-          const [computercount, setcomputercount] = useState(0)
+          const [usercount, setUsercount] = useState(0)
+          const [computercount, setComputercount] = useState(0)
           const [win, setwin] = useState("")
-          
-          const userChoice=(callback)=>{
+        
+
+          const Userchoice=()=>{
             let x=Math.floor(Math.random()*3)+1
             if(x===1){setactive(1);setComputer('Rock')}
             else if(x===2){setactive(2);setComputer('Paper')}
-            else {(setactive(3));setComputer('Scissors')};
-            callback()}
-
-          const computerChoice=()=>{                      
-            if(user=='Rock' && computer=='Paper'){setusercount(usercount+1);setwin("user wins!")}
-            else if(user=='Rock' && computer=='Scissors'){setusercount(usercount+1);setwin("user wins!")}
-            else if(user=='Paper' && computer=='Scissors'){setusercount(usercount+1);setwin("user wins!")}
-            else if(user=='Paper' && computer=='Rock'){setcomputercount(computercount+1);setwin("computer wins!")}
-            else if(user=='Scissors' && computer=='Rock'){setcomputercount(computercount+1);setwin("computer wins!")}
-            else if(user=='Scissors' && computer=='Paper'){setcomputercount(computercount+1);setwin("computer wins!")}             
+            else {(setactive(3));setComputer('Scissors')}
             }
 
+            useEffect(() => {
+              if(user==='Rock' && computer==='Paper'){setUsercount(prevUsercount=>prevUsercount+1);setwin("User wins!")}
+            else if(user==='Rock' && computer==='Scissors'){setUsercount(prevUsercount=>prevUsercount+1);setwin("User wins!")}
+            else if(user==='Paper' && computer==='Scissors'){setUsercount(prevUsercount=>prevUsercount+1);setwin("User wins!")}
+            else if(user==='Paper' && computer==='Rock'){setComputercount(prevComputercount=>prevComputercount+1);setwin("Computer wins!")}
+            else if(user==='Scissors' && computer==='Rock'){setComputercount(prevComputercount=>prevComputercount+1);setwin("Computer wins!")}
+            else if(user==='Scissors' && computer==='Paper'){setComputercount(prevComputercount=>prevComputercount+1);setwin("Computer wins!")} 
+            else if((user==='Rock' && computer==='Rock') || (user==='Paper' && computer==='Paper') || (user==='Scissors' && computer==='Scissors')){setwin("Game draw!")}
+          }, [computer,user])
+            
+                       
+      
        
          
         
@@ -267,14 +272,15 @@ function App() {
      {/*paper game*/}
      <div className='heading'>Rock Paper Scissors game</div><br/>
      <div className="papergame">
-     <button className={active===1?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(1);userChoice(computerChoice)}} value="Rock">Rock</button>
-     <button className={active===2?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(2);userChoice(computerChoice)}} value="Paper">Paper</button>
-     <button className={active===3?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(3);userChoice(computerChoice)}} value="Scissors">Scissors</button>
+     <button className={active===1?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(1);Userchoice()}} value="Rock">Rock</button>
+     <button className={active===2?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(2);Userchoice()}} value="Paper">Paper</button>
+     <button className={active===3?"active":""} onClick={(e)=>{setUser(e.target.value);setactive(3);Userchoice()}} value="Scissors">Scissors</button>
      </div>
      <div className='result'>
      <div>User's Choice:<b>{user}</b></div>
      <div>Computer's Choice:<b>{computer}</b></div>
      <div><span className='userwin'>User win:</span><b>{usercount}</b>     <span className='computerwin'>Computer win:</span><b>{computercount}</b></div>
+     <b>{win}</b>
      </div>
      <hr/>
     </>
