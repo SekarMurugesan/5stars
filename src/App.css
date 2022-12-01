@@ -42,3 +42,16 @@
  .result {white-space: pre;text-align: center; height: 120px;}
 .userwin {color: blue; font-size: larger; font-weight: bolder;}
 .computerwin {color: rgb(255, 0, 140); font-size: larger; font-weight: bolder;}
+
+
+/*josephus*/
+.jose {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto; 
+  }
+  .jose h4 {
+    white-space:pre-line
+  }

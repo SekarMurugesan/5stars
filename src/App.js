@@ -2,6 +2,7 @@ import React, { useState,useEffect} from 'react'
 import { Rating } from 'react-simple-star-rating'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
+import Josephus from './Images/josephus.gif'
 
 
 
@@ -24,7 +25,8 @@ function App() {
     let counterseven=0
     let countereight=0
     let counternine=0
-    
+    //let [countertwo,counterthree,counterfour,counterfive,countersix,counterseven,countereight,counternine] = 0
+
     let b=0
     let c=0
     let d=0
@@ -229,7 +231,13 @@ function App() {
             else if((user==='Rock' && computer==='Rock') || (user==='Paper' && computer==='Paper') || (user==='Scissors' && computer==='Scissors')){setwin("Game draw!")}
           }, [computer,user])
             
-                       
+   //josephus
+   const [soldier, setsoldier] = useState();
+   const [survive, setsurvive] = useState();
+   
+   function josecalc() {  
+   let m=Math.floor(Math.log2(soldier)) ;
+   setsurvive(2*(soldier-(Math.pow(2,m)))+1)}                
       
        
          
@@ -242,6 +250,7 @@ function App() {
   return (
     <>
     {/*5star rating */}
+    <div className='heading'>5star rating</div><br/>
     <div className="container">
       <div className='head'>RATING(SELECT A STAR AMOUNT)
      <br/><br/><div className='App head'>
@@ -253,6 +262,7 @@ function App() {
      <hr/>
 
      {/*keyboard */}
+     <div className='heading'>Keyboard</div><br/>
      <div className='keyboard'> 
      <div className='head'>
      <input type="text" style={{height:"30px",width:"200px"}}  id="myText"/><br/><br/>
@@ -283,6 +293,18 @@ function App() {
      <b>{win}</b>
      </div>
      <hr/>
+
+      {/*Josephus*/}
+      <div className='heading'>Josephus game</div><br/>
+      <div className='jose'>
+      <img src={Josephus} className="img-fluid" width="500px" height="300px"/>
+      <div className='text-success text-center'><h4>{`One killed besides others and finally
+         who will survive?`}</h4></div>
+      <div><label>No.of soldier:</label><input type="text" value={soldier} onChange={(e)=>setsoldier(e.target.value)}/></div><br/>
+      <button type='submit' onClick={josecalc}>Submit</button>
+      <div><b>Final survive soldier number:</b><span className='text-primary h5'>{survive}</span></div>
+      </div>
+      <hr/>
     </>
        
   );
